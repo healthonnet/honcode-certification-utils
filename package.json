@@ -1,0 +1,22 @@
+{
+  "name": "honcode-certification-utils",
+  "version": "0.0.1",
+  "description": "HONcode certification utils functions",
+  "keywords": [
+    "HONcode",
+    "Certification",
+    "HON",
+    "Health On the Net",
+    "Utils"
+  ],
+  "author": "William Belle <william.belle@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/healthonnet/honcode-certification-utils.git",
+  "main": "src/index.js",
+  "files": [
+    "src/index.js"
+  ],
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {}
+}
