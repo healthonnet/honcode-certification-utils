@@ -16,7 +16,9 @@
   "files": [
     "src/index.js"
   ],
-  "scripts": {},
+  "scripts": {
+    "test": "jshint ."
+  },
   "devDependencies": {},
   "dependencies": {}
 }
