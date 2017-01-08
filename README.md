@@ -1,1 +1,67 @@
-# honcode-certification-utils
+HONcode Certification Utils
+===========================
+
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status][coverage-image]][coverage-url]
+[![Dependency Status][gemnasium-image]][gemnasium-url]
+[![NPM version][npm-image]][npm-url]
+
+HONcode Certification Utils as NPM module
+
+Usage
+-----
+
+```bash
+$ npm install honcode-certification-utils --save
+```
+
+Then you can `require('honcode-certification-utils')`.
+
+```js
+var HONcodeUtils = require('honcode-certification-utils');
+
+HONcodeUtils.formatUrl('https://www.hon.ch/');
+HONcodeUtils.buildUrlToCheck('hon.ch/20-years/en/tools.html');
+```
+
+API
+---
+
+### .formatUrl(url)
+
+Type: `function`
+
+Remove protocol (`http://` or `https://`) and subdomain `www` from a url string.
+
+### .buildUrlToCheck(url)
+
+Type: `function`
+
+Return a list of urls to check in the HONcode MD5 list.
+
+Contributing to HONcode Certification Utils
+-------------------------------------------
+
+Contributions are always welcome, no matter how large or small.
+
+See [Contributing](CONTRIBUTING.md).
+
+Developer
+---------
+
+  * William BELLE
+
+License
+-------
+
+Apache License 2.0
+
+
+[npm-image]: https://img.shields.io/npm/v/honcode-certification-utils.svg
+[npm-url]: https://www.npmjs.com/package/honcode-certification-utils
+[travis-image]: https://travis-ci.org/healthonnet/honcode-certification-utils.svg?branch=master
+[travis-url]: https://travis-ci.org/healthonnet/honcode-certification-utils
+[coverage-image]: https://coveralls.io/repos/github/healthonnet/honcode-certification-utils/badge.svg
+[coverage-url]: https://coveralls.io/github/healthonnet/honcode-certification-utils
+[gemnasium-image]: https://gemnasium.com/badges/github.com/healthonnet/honcode-certification-utils.svg
+[gemnasium-url]: https://gemnasium.com/github.com/healthonnet/honcode-certification-utils
