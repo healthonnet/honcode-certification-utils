@@ -39,6 +39,11 @@ Type: `function`
 
 Return a list of urls to check in the HONcode MD5 list.
 
+See Also
+--------
+
+ * [HONcode Certification List](https://github.com/healthonnet/honcode-certification-list)
+
 Contributing to HONcode Certification Utils
 -------------------------------------------
 
