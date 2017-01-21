@@ -28,4 +28,17 @@ describe('HONcode Certification Utils', function() {
     utils.isValidUrl('http://').should.equal(false);
     utils.isValidUrl('foobar').should.equal(false);
   });
+
+  it('should add a trailing slash if necessary', function() {
+    utils.addTrailingSlash('https://www.hon.ch/index.html')
+      .should.equal('https://www.hon.ch/index.html');
+    utils.addTrailingSlash('https://www.hon.ch/index.html#anchor')
+      .should.equal('https://www.hon.ch/index.html#anchor');
+    utils.addTrailingSlash('https://www.hon.ch/search.html?q=asthma')
+      .should.equal('https://www.hon.ch/search.html?q=asthma');
+    utils.addTrailingSlash('https://www.hon.ch/a')
+      .should.equal('https://www.hon.ch/a/');
+    utils.addTrailingSlash('https://www.hon.ch')
+      .should.equal('https://www.hon.ch/');
+  });
 });

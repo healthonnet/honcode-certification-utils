@@ -1,5 +1,6 @@
 'use strict';
 
+var path     = require('path');
 var urlParse = require('url');
 
 exports.formatUrl = function(url) {
@@ -38,4 +39,26 @@ exports.isValidUrl = function(str) {
     return true;
   }
   return false;
+};
+
+exports.addTrailingSlash = function(url) {
+  var parsed   = urlParse.parse(url);
+  var urlParts = url.split('/');
+  var basename = path.basename(parsed.pathname);
+  var result   = '';
+
+  for (var i = 0; i < urlParts.length; i++) {
+    if (i === urlParts.length - 1) {
+      if (urlParts[i] === basename && urlParts[i].indexOf('.') > -1) {
+        result = url;
+      } else {
+        if (urlParts[i].indexOf('#') > -1 || urlParts[i].indexOf('?') > -1) {
+          result = url;
+        } else {
+          result = url + '/';
+        }
+      }
+    }
+  }
+  return result;
 };
