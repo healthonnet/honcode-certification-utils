@@ -28,22 +28,32 @@ HONcodeUtils.isValidUrl('https://');
 //=> false
 HONcodeUtils.isValidUrl('http://www.hon.ch');
 //=> true
+HONcodeUtils.addTrailingSlash('http://www.hon.ch');
+//=> 'http://www.hon.ch/'
+HONcodeUtils.addTrailingSlash('https://www.hon.ch/20-years');
+//=> 'https://www.hon.ch/20-years/'
 ```
 
 API
 ---
 
-### .formatUrl(url)
+### .addTrailingSlash(url)
 
 Type: `function`
 
-Remove protocol (`http://` or `https://`) and subdomain `www` from a url string.
+Add a trailing slash to a url if necessary.
 
 ### .buildUrlToCheck(url)
 
 Type: `function`
 
 Return a list of urls to check in the HONcode MD5 list.
+
+### .formatUrl(url)
+
+Type: `function`
+
+Remove protocol (`http://` or `https://`) and subdomain `www` from a url string.
 
 ### .isValidUrl(str)
 
