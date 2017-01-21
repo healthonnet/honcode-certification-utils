@@ -39,6 +39,12 @@ Type: `function`
 
 Return a list of urls to check in the HONcode MD5 list.
 
+### .isValidUrl(str)
+
+Type: `function`
+
+Return true if the url is valid.
+
 See Also
 --------
 
