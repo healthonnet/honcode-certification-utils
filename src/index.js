@@ -1,5 +1,7 @@
 'use strict';
 
+var urlParse = require('url');
+
 exports.formatUrl = function(url) {
   if (url.indexOf('http://') === 0) {
     url = url.substr(7);
@@ -28,4 +30,12 @@ exports.buildUrlToCheck = function(url) {
   }
 
   return listUrls.reverse();
+};
+
+exports.isValidUrl = function(str) {
+  var urlObj = urlParse.parse(str);
+  if (urlObj.hostname && urlObj.pathname) {
+    return true;
+  }
+  return false;
 };

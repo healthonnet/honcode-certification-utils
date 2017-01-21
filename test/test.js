@@ -21,4 +21,11 @@ describe('HONcode Certification Utils', function() {
     utils.buildUrlToCheck('hon.ch/A/foobar.html')
       .should.deep.equal(['hon.ch/a/','hon.ch/']);
   });
+
+  it('should validate a url', function() {
+    utils.isValidUrl('http://www.hon.ch').should.equal(true);
+    utils.isValidUrl('https://foobar').should.equal(true);
+    utils.isValidUrl('http://').should.equal(false);
+    utils.isValidUrl('foobar').should.equal(false);
+  });
 });
