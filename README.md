@@ -21,7 +21,13 @@ Then you can `require('honcode-certification-utils')`.
 var HONcodeUtils = require('honcode-certification-utils');
 
 HONcodeUtils.formatUrl('https://www.hon.ch/');
+//=> 'hon.ch/'
 HONcodeUtils.buildUrlToCheck('hon.ch/20-years/en/tools.html');
+//=> [ 'hon.ch/20-years/en/', 'hon.ch/20-years/', 'hon.ch/' ]
+HONcodeUtils.isValidUrl('https://');
+//=> false
+HONcodeUtils.isValidUrl('http://www.hon.ch');
+//=> true
 ```
 
 API
@@ -48,7 +54,7 @@ Return true if the url is valid.
 See Also
 --------
 
- * [HONcode Certification List](https://github.com/healthonnet/honcode-certification-list)
+  * [HONcode Certification List](https://github.com/healthonnet/honcode-certification-list)
 
 Contributing to HONcode Certification Utils
 -------------------------------------------
