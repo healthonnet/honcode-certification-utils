@@ -22,11 +22,11 @@
     "coveralls": "npm run coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.0.1",
     "istanbul": "^0.4.5",
     "jscs": "^3.0.7",
     "jshint": "~2.9.4",
-    "mocha": "^3.2.0"
+    "mocha": "^3.4.2"
   },
   "dependencies": {
     "url": "^0.11.0"
